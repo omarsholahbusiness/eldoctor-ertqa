@@ -629,7 +629,7 @@ export default function HomePage() {
 
         {/* WhatsApp Button */}
         <motion.a
-          href="https://wa.me/201060521835"
+          href="https://wa.me/2001015176190"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, x: 50 }}

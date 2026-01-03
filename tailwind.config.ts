@@ -1,5 +1,13 @@
-import type { Config } from "tailwindcss"
-import { theme } from "./lib/theme"
+import tailwindcssAnimate from "tailwindcss-animate"
+import tailwindcssTypography from "@tailwindcss/typography"
+
+// Theme colors - imported from lib/theme.ts
+// Note: Direct import doesn't work in Tailwind config, so values are inlined
+const themeColors = {
+  brand: "#59003d",
+  brandLight: "#59003d",
+  brandDark: "#59003d",
+}
 
 const config = {
   darkMode: "class",
@@ -57,9 +65,9 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          DEFAULT: theme.brand,
-          light: theme.brandLight,
-          dark: theme.brandDark,
+          DEFAULT: themeColors.brand,
+          light: themeColors.brandLight,
+          dark: themeColors.brandDark,
         },
       },
       borderRadius: {
@@ -84,13 +92,13 @@ const config = {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography"),
+    tailwindcssAnimate,
+    tailwindcssTypography,
     function({ addVariant }: { addVariant: (name: string, definition: string) => void }) {
       addVariant('rtl', '&[dir="rtl"]');
       addVariant('ltr', '&[dir="ltr"]');
     }
   ],
-} satisfies Config
+}
 
 export default config 

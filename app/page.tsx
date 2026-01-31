@@ -598,7 +598,7 @@ export default function HomePage() {
       </section>
 
       {/* Floating Social Media Buttons */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4 items-end" dir="ltr">
+      <div className="hidden md:flex fixed bottom-6 right-6 z-50 flex-col gap-4 items-end" dir="ltr">
         {/* Facebook Button */}
         <motion.a
           href="https://www.facebook.com/profile.php?id=61562299293140&locale=ar_AR"
